@@ -1,0 +1,11 @@
+ ____________ method renders the document in a JSON-like format.
+a) displayjson
+b) print
+c) printjson
+d) printdoc
+
+Which of the following method returns one document?
+a) findOne()
+b) findOne1()
+c) selectOne()
+d) all of the mentioned

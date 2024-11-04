@@ -1,0 +1,13 @@
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Scripts/directivescript.js"></script>
+    </head>
+    <body>
+        <div ng-app="docsTimeDirective">
+        <div ng-controller="Controller">
+            Date format: <input ng-model="format"> <hr/>
+            Current time is: <span my-current-time="format"></span>
+          </div></div>          
+    </body>
+</html>

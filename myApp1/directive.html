@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="docsBindExample">
+        <div ng-controller="Controller">
+            Hello <input ng-model='name'> <hr/>
+            <span ng-bind="name"></span> <br/>
+            <span ng:bind="name"></span> <br/>
+            <span ng_bind="name"></span> <br/>
+            <span data-ng-bind="name"></span> <br/>
+            <span x-ng-bind="name"></span> <br/>
+          </div>    </div>      
+          <script>
+            angular.module('docsBindExample', [])
+            .controller('Controller', ['$scope', function($scope) {
+                $scope.name = 'Sample text to check directive normalization';
+            }]);
+          </script>
+    </body>
+</html>

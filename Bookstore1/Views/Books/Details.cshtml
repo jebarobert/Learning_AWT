@@ -1,0 +1,41 @@
+@model Bookstore1.Models.Book
+@{
+ViewData["Title"] = "Book Details";
+}
+<h1 class= "display-4">Book Details</h1>
+<table>
+<tr>
+<td>@Html.DisplayNameFor(model => model.Id)</td>
+<td>@Html.DisplayFor(model => model.Id)</td>
+</tr>
+<tr>
+<td>@Html.DisplayNameFor(model => model.Title)</td>
+<td>@Html.DisplayFor(model => model.Title)</td>
+</tr>
+<tr>
+<td>@Html.DisplayNameFor(model => model.Genre)</td>
+<td>@Html.DisplayFor(model => model.Genre)</td>
+</tr>
+<tr>
+<td>@Html.DisplayNameFor(model => model.Price)</td>
+<td>@Html.DisplayFor(model => model.Price)</td>
+</tr>
+<tr>
+<td>@Html.DisplayNameFor(model => model.PublishDate)</td>
+<td>@Html.DisplayFor(model => model.PublishDate)</td>
+</tr>
+<tr>
+<td>@Html.DisplayNameFor(model => model.Authors)</td>
+<td>@Html.DisplayFor(model => model.Authors)</td>
+</tr>
+</table>
+Index
+@{
+ ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+ <h1 class="display-4">Welcome</h1>
+ <p>Learn about <a
+href="https://docs.microsoft.com/aspnet/core">building Web apps with
+ASP.NET Core</a>.</p>
+</div>

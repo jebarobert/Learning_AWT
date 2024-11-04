@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="Scripts/myScript.js"></script>
+    </head>
+    <body ng-app="myModule">
+        <div ng-controller="myController">
+            <ul>
+                <li ng-repeat="food in Menu">
+                    {{food.type}}
+                    <ul>
+                        <li ng-repeat="dish in food.items">{{dish.name}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

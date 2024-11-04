@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var myapp= angular.module('app', [])
+myapp.directive('myDirective1', function() {
+  return {
+  require: 'ngModel',
+  link: function(scope, element, attr, mCtrl) {
+    var today = new Date();
+    function myValidation1(value) {
+      if (value < today) {
+      mCtrl.$setValidity('charE', true);
+      } else {
+      mCtrl.$setValidity('charE', false);
+      }
+      return value;
+    }
+  mCtrl.$parsers.push(myValidation1);
+  }
+  };
+});
+</script>
+</head>
+<body ng-app="app">
+<form name="form1">
+<input type="date" ng-model="Date" name="Date" my-directive1/>{{Date}}
+<span ng-show="form1.Date.$invalid">Date cannot be greater than today!</span>
+</form>
+</body>
+</html>

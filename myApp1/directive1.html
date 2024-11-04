@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="docsSimpleDirective">
+        <div ng-controller="Controller">
+            <div class="my-customer"></div>
+            <div my-customer></div>
+            <my-customer></my-customer>
+            <!-- directive:my-customer -->
+        </div> 
+        </div>      
+          <script>
+            angular.module('docsSimpleDirective', [])
+            .controller('Controller', ['$scope', function($scope) {
+                $scope.customer = {
+                    name: 'alpha',
+                    address: 'sion,mumbai - 22'
+                };
+            }])
+            .directive('myCustomer', function() {
+                return {
+                    restrict: 'AEC',
+                    template: 'Name: {{customer.name}} Address: {{customer.address}}'
+                };
+            });
+          </script>
+    </body>
+</html>
